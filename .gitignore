@@ -4,3 +4,4 @@ node_modules
 npm-debug.log
 back-end/credentials.json
 back-end/dist
+back-end/.env
