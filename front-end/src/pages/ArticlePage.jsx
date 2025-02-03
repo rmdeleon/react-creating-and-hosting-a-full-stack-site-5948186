@@ -18,7 +18,7 @@ export default function ArticlePage() {
     async function onUpvoteClicked() {
       const token = user && await user.getIdToken();
       const headers = token ? {authtoken: token}: {};
-      const response = await axios.post('/api/articles/'+ name + '/upvote', null, {headers});
+      const response = await axios.put('/api/articles/'+ name + '/upvote', null, {headers});
       const updatedArticleData = response.data;
       setUpvotes(updatedArticleData.upvotes);
     }
